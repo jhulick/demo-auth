@@ -1,0 +1,32 @@
+﻿<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wblue">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+                        <!--<pre>{{vm.customers.data | json}}</pre>-->
+                        <input data-ng-model="vm.filter.name" placeholder="Find by name"/>
+                        <table class="table table-condensed table-striped">
+                            <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-ng-repeat="c in vm.customers | filter:vm.filter track by c.id">
+                                <td><span class="customer-name">{{c.name}}</span></td>
+                                <td>{{c.description | limitTo: 2000 }} ...</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

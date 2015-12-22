@@ -1,0 +1,3 @@
+﻿table.dataTable th, table.dataTable td {
+    overflow: hidden;
+}
